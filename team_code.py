@@ -204,10 +204,10 @@ def extract_features(record):
             return None
 
         # Agregar características adicionales
-        base_features['frequency_domain'] = frequency_domain_analysis(normalized_data[:, 1], sfreq)
+        #base_features['frequency_domain'] = frequency_domain_analysis(normalized_data[:, 1], sfreq)
         #base_features['nonlinear'] = nonlinear_features(normalized_data[:, 1])
-        base_features['signal_characteristics'] = additional_signal_characteristics(normalized_data[:, 1])
-        base_features['wavelet_features'] = complex_wavelet_transform(normalized_data[:, 1])
+        #base_features['signal_characteristics'] = additional_signal_characteristics(normalized_data[:, 1])
+        #base_features['wavelet_features'] = complex_wavelet_transform(normalized_data[:, 1])
 
         # Agregar información demográfica
         base_features['demographic'] = {
