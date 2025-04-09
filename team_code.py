@@ -251,7 +251,7 @@ def sample_records(records, max_samples):
     """Return a random subset of records, up to max_samples."""
     return random.sample(records, min(max_samples, len(records)))
 
-def select_records(data_folder, records, max_sami = 3000, max_ptb = 3000, max_negative_code = 6000, max_positive_code = 6000):
+def select_records(data_folder, records, max_sami = 3000, max_ptb = 5000, max_negative_code = 0, max_positive_code = 0):
     #Check folders existance
     if not any(folder in os.listdir(data_folder) for folder in ["CODE-15%", "PTB-XL", "SaMi-Trop"]):
         print('Data folders not found: CODE-15%, PTB-XL, SaMi-Trop')
